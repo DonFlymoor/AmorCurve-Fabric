@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "armorcurve",
+  "version": "${version}",
+
+  "name": "Armor Curve",
+  "description": "Linearizes the armor-effective max hp formula to buff early game armor.",
+  "authors": [
+    "AkashiiKun"
+  ],
+
+  "license": "CC0-1.0",
+  "icon": "assets/armorcurve/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.akashiikun.armorcurve.ArmorCurveMod"
+    ],
+    "modmenu": [
+      "io.github.akashiikun.armorcurve.compat.ArmorCurveModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "armorcurve.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric-api": "*",
+    "minecraft": "~1.18",
+    "java": ">=17",
+    "cloth-config": "*"
+  }
+}
