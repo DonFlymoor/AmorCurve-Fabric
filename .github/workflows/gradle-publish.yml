@@ -43,7 +43,8 @@ jobs:
       uses: actions/upload-artifact@v3.1.3
       with:
         # Artifact name
-        name: ./*.jar
+        name: armorcurve.jar
+        path: ./*.jar
           
     - name: GitHub Upload Release Artifacts
       uses: Roang-zero1/github-upload-release-artifacts-action@v3.0.0
