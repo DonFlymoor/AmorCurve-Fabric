@@ -10,7 +10,10 @@ name: Gradle Package
 on:
   release:
     types: [created]
-
+    
+env:
+  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  
 jobs:
   build:
 
@@ -37,6 +40,8 @@ jobs:
       with:
         arguments: build
 
+    - name: ls
+      run: ls -l -a
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
     - name: Upload a Build Artifact
